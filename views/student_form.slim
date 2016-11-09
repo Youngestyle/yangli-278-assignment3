@@ -1,0 +1,12 @@
+label for="id" ID:
+input#id type="number" name="student[id]" value="#{@student.id}" max="9999999"
+label for="name" Name:
+input#name type="text" name="student[name]" value="#{@student.name}"
+label for="height" Height(cm):
+input#height type="number" name="student[height]" value="#{@student.height}"
+label for="dob" Date of Birth(mm/dd/yyyy):
+input#dob type="text" name="student[dob]" value="#{@student.dob.strftime("%m/%d/%Y") if @student.dob}"
+label for="description" Description:
+textarea#description name="student[description]" == @student.description
+
+input type="submit" value="Save Student"

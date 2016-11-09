@@ -1,0 +1,8 @@
+h1 Students
+input type="button" onclick="location.href='/students/new';" value="Create a new student"
+- if @students.any?
+  ul#students
+    -@students.each do |student|
+      li <a href="/students/#{student.id}">#{student.name}</a>
+- else
+  p No students have been created yet!
