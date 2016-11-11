@@ -40,7 +40,7 @@ end
 get '/students/:id/edit' do
   halt slim :login unless session[:admin]
   @student = Student.get(params[:id])
-  slim :edit_song
+  slim :edit_student
 end
 
 post '/students' do  

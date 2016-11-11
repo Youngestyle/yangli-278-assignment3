@@ -1,3 +1,4 @@
+input type="button" onclick="location.href='/students/#{@student.id}';" value="Back"
 h1 Edit Student
 form method="POST" action="/students/#{@student.id}"
   input type="hidden" name="_method" value="PUT"
