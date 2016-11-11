@@ -1,3 +1,4 @@
+ruby '2.3.1'
 source :rubygems
 gem "sinatra"
 gem "slim"
