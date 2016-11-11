@@ -31,6 +31,7 @@ end
 post '/login' do
 	if params[:username] == settings.username && params[:password] == settings.password
 		session[:admin] = true
+		session[:name] = params[:username]
 		redirect to ('/students')
 	else
 		session[:fail] = true

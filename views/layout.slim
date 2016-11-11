@@ -6,8 +6,10 @@ html lang="en"
     link rel="stylesheet" href="/styles.css"
   body
     header
-      - if session[:admin]
-        input type="button" onclick="location.href='/logout';" value="LOG OUT" style="float: right;"
+      - if session[:admin] 
+        div style="float: right;"
+          p User: #{session[:name]}
+          input type="button" onclick="location.href='/logout';" value="LOG OUT"
       - else
         input type="button" onclick="location.href='/login';" value="LOG IN" style="float: right;"
 
