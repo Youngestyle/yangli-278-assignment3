@@ -1,5 +1,5 @@
-label for="id" ID:
-input#id type="number" name="student[id]" value="#{@student.id}" max="9999999"
+label for="id" ID: (exact 7 digit number)
+input#id type="number" name="student[id]" value="#{@student.id}" max="9999999" step="1"
 label for="name" Name:
 input#name type="text" name="student[name]" value="#{@student.name}"
 label for="height" Height(cm):
