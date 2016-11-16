@@ -1,12 +1,7 @@
 require 'sinatra'
+require 'slim'
 require 'sass'
 require './student'
-
-configure do
-	enable :sessions
-	set :username, "yuan"
-	set :password, "wang"
-end
 
 get('/styles.css'){ scss :styles }
 
