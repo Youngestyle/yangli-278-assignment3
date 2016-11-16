@@ -2,7 +2,8 @@ require 'sinatra'
 require 'dm-core'
 require 'dm-migrations'
 
-DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/students.db")
+DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_RED_URL'])
+#DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/students.db")
 
 class Student
   include DataMapper::Resource
