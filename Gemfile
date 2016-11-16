@@ -8,5 +8,4 @@ gem "dm-migrations"
 gem "thin"
 gem "pg", :group => :production
 gem "dm-postgres-adapter", :group => :production
-gem "sqlite3"
 gem "dm-sqlite-adapter", :group => :development
