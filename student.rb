@@ -2,8 +2,8 @@ require 'sinatra'
 require 'dm-core'
 require 'dm-migrations'
 
-DataMapper.setup(:default, ENV['DATABASE_URL'])
-#DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/students.db")
+#DataMapper.setup(:default, ENV['DATABASE_URL'])
+DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
 
 class Student
   include DataMapper::Resource
